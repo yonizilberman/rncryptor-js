@@ -11,3 +11,24 @@ BTW: This project would love an owner. I hate JavaScript. But I love secure syst
 
 SJCL (1.0.0) config:
 ./configure --without-all --with-aes --with-bitArray --with-codecHex --with-sha256 --with-sha1 --with-hmac --with-pbkdf2 --with-random --with-convenience --with-cbc
+
+
+
+
+Example code:
+
+```html
+<script src="../sjcl.js"></script>
+<script src="../rncryptor.js"></script>
+<script>
+	var txt = 'Hi you!';
+	var key = '0123456789';
+
+	var encryptTxt = JSCryptor.Encrypt(txt, key);
+	console.log('Encrypt text: ', encryptTxt);
+
+	var decryptTxt = JSCryptor.Decrypt(encryptTxt, key);
+	console.log('Decrypt text: ', decryptTxt);
+</script>
+
+```
